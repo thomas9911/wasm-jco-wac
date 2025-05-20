@@ -1,0 +1,6 @@
+package bb:simple-cli@0.1.0;
+
+world adder {
+    import bb:simple/add@0.1.0;
+    export wasi:cli/run@0.2.3;
+}

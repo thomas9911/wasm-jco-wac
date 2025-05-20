@@ -1,0 +1,2 @@
+[overrides]
+"bb:simple" = { path = "../simple-js/wit" }
