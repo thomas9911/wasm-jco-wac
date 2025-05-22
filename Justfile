@@ -9,6 +9,8 @@ build:
 
 build-js:
   - cd components/simple-js && npm install && npm run build
+  - cd components/cli-simple-js && npm install && npm run build
+  - cd components/http-simple-js && npm install && npm run build
 
 wac:
   # - wac plug -o here.wasm --plug {{global_target}}/wasm32-wasip2/debug/simple.wasm {{global_target}}/wasm32-wasip2/debug/cli_simple.wasm
@@ -17,6 +19,12 @@ wac:
 
 wac-js:
   - wac plug -o here-js.wasm --plug ./components/simple-js/dist/simple-js.wasm ./components/cli-simple-js/dist/cli-simple-js.wasm
+  - wac plug -o here-http-js.wasm --plug ./components/simple-js/dist/simple-js.wasm ./components/http-simple-js/dist/http-simple-js.wasm
+
+wac-wash:
+  - wash build --config-path components/simple-js
+  - wash build --config-path components/http-simple-js
+  - wac plug -o here-wash-http-js.wasm --plug ./components/simple-js/dist/simple_js_s.wasm ./components/http-simple-js/dist/http_simple_js_s.wasm
 
 run-wac:
   - wasmtime run -S common here.wasm

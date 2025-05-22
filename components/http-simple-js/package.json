@@ -1,0 +1,20 @@
+{
+  "name": "bundled-rsbuild",
+  "version": "0.1.0",
+  "description": "A WebAssembly Component implements a custom interface and uses npm dependencies",
+  "type": "module",
+  "main": "demo.js",
+  "scripts": {
+    "build:js": "jco componentize -d random -d stdio -w wit -o dist/http-simple-js.wasm src/index.js",
+    "build": "npm run build:js",
+    "install-and-build": "npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@bytecodealliance/jco": "^1.11.2"
+  },
+  "dependencies": {}
+}

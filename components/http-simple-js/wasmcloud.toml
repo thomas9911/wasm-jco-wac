@@ -1,0 +1,16 @@
+language = "typescript"
+type = "component"
+name = "http-simple-js"
+version = "0.1.0"
+
+[component]
+wit_world = "adder"
+wasm_target = "wasm32-wasip2"
+
+build_command = "npm run install-and-build"
+build_artifact = "dist/http-simple-js.wasm"
+destination = "dist/http_simple_js_s.wasm"
+
+[[registry.pull.sources]]
+target = "bb:simple@0.1.0"
+source = "file://../simple/wit/world.wit"

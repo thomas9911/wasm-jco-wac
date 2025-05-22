@@ -1,0 +1,12 @@
+language = "typescript"
+type = "component"
+name = "simple-js"
+version = "0.1.0"
+
+[component]
+wit_world = "adder"
+wasm_target = "wasm32-wasip2"
+
+build_command = "npm run install-and-build"
+build_artifact = "dist/simple-js.wasm"
+destination = "dist/simple_js_s.wasm"

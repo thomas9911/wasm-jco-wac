@@ -1,0 +1,6 @@
+package bb:simple-http@0.1.0;
+
+world adder {
+    import bb:simple/add@0.1.0;
+    export wasi:http/incoming-handler@0.2.3;
+}
